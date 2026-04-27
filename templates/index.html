@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>🚦 Smart Traffic Monitoring</h1>
+</div>
+
+<div class="grid">
+
+    <!-- LEFT: VIDEO -->
+    <div class="card video-card">
+        <h2>Live Camera</h2>
+        <img id="video" src="">
+        
+        <div class="controls">
+            <button onclick="startCamera()">Start</button>
+            <button onclick="stopCamera()">Stop</button>
+        </div>
+
+        <p id="status">Status: Stopped</p>
+    </div>
+
+    <!-- RIGHT: LIVE DATA -->
+    <div class="card">
+        <h2>Live Violations</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plate</th>
+                    <th>Name</th>
+                    <th>Fine</th>
+                    <th>Reason</th>
+                </tr>
+            </thead>
+            <tbody id="violationsTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
